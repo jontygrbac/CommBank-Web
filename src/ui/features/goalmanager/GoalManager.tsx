@@ -16,6 +16,7 @@ import EmojiPicker from '../../components/EmojiPicker'
 import GoalIcon from './GoalIcon'
 import { MouseEvent } from "react";
 
+
 type Props = { goal: Goal }
 
 export function GoalManager(props: Props) {
@@ -62,6 +63,7 @@ const GoalIconContainer = styled.div<GoalIconContainerProps>`
     }
   
     dispatch(updateGoalRedux(updatedGoal))
+    updateGoalApi(props.goal.id, updatedGoal)
   }
 
 
